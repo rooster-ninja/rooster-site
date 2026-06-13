@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refraction Analysis — Goose</title>
+  <meta property='og:type'        content='website'>
+  <meta property='og:site_name'   content='Goose'>
+  <meta property='og:title'       content='Atmospheric Refraction Analysis'>
+  <meta property='og:description' content='Pikes Peak / 39 Aquarii stellar occultation — Ciddor ray-trace vs Grand Junction radiosonde.'>
+  <meta property='og:url'         content='https://rooster.ninja/refraction/'>
+  <meta property='og:image'       content='https://rooster.ninja/goose_preview.jpg'>
+  <meta property='og:image:width' content='1209'>
+  <meta property='og:image:height' content='500'>
+  <meta name='twitter:card'       content='summary_large_image'>
+  <meta name='twitter:image'      content='https://rooster.ninja/goose_preview.jpg'>
+  <meta name='twitter:title'      content='Atmospheric Refraction Analysis'>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex; flex-direction: column; align-items: center;
+      min-height: 100vh; margin: 0; padding: 3rem 1rem;
+      background: #0d1117; color: #e6edf3; box-sizing: border-box;
+    }
+    .breadcrumb { font-size: 0.9rem; color: #8b949e; margin-bottom: 2rem; }
+    .breadcrumb a { color: #58a6ff; text-decoration: none; }
+    h1 { font-size: 2.8rem; font-weight: 700; margin: 0 0 0.4rem; letter-spacing: -1px; }
+    .subtitle { color: #8b949e; margin-bottom: 1.8rem; font-size: 1rem; }
+    a.full {
+      display: inline-block; margin-bottom: 2.5rem; color: #58a6ff; text-decoration: none;
+      font-size: 1.1rem; padding: 0.6rem 1.4rem; border: 1px solid #30363d;
+      border-radius: 6px; transition: border-color 0.2s;
+    }
+    a.full:hover { border-color: #58a6ff; }
+    .plots-label {
+      width: 100%; max-width: 900px; margin-bottom: 0.6rem;
+    }
+    .plots-label h2 {
+      font-size: 1.3rem; font-weight: 600; color: #e6edf3; margin: 0 0 0.2rem;
+    }
+    .plots-label p {
+      font-size: 0.85rem; color: #8b949e; margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem; width: 100%; max-width: 900px;
+    }
+    a.card {
+      color: #e6edf3; text-decoration: none; padding: 1.1rem 1.4rem;
+      border: 1px solid #30363d; border-radius: 8px;
+      transition: border-color 0.2s, background 0.2s; display: block;
+    }
+    a.card:hover { border-color: #58a6ff; background: #161b22; }
+    a.card .num  { font-size: 0.75rem; color: #8b949e; margin-bottom: 0.3rem; }
+    a.card .title { font-size: 1rem; font-weight: 600; color: #58a6ff; }
+    a.card .desc  { font-size: 0.85rem; color: #8b949e; margin-top: 0.3rem; }
+  </style>
+</head>
+<body>
+  <div class='breadcrumb'><a href='/'>Goose</a> / <a href='/celtheo/'>Celtheo</a> / Refraction Analysis</div>
+  <h1>Atmospheric Refraction</h1>
+  <p class='subtitle'>Pikes Peak / 39 Aquarii stellar occultation — 2025-01-27 · Ciddor ray-trace vs Grand Junction radiosonde</p>
+
+  <a class="full" href="/refraction/refraction_analysis.html">Full Analysis →</a>
+  <a class="full" href="https://github.com/rooster-ninja/AL_RefractionAnalysis" target="_blank" rel="noopener">Git Link to Full Jupyter Notebook →</a>
+
+  <div class='plots-label'>
+    <h2>Interactive Plots</h2>
+    <p>Full zoom, pan and mouse wheel control.</p>
+  </div>
+
+  <div class='grid'>
+    <a class='card' href='/refraction/section3_radiosonde_profile.html'>
+      <div class='num'>Section 3</div>
+      <div class='title'>Grand Junction Radiosonde</div>
+      <div class='desc'>Atmospheric profile — temperature, pressure, humidity, mixing ratio</div>
+    </a>
+    <a class='card' href='/refraction/section4_refractive_index.html'>
+      <div class='num'>Section 4</div>
+      <div class='title'>Refractive Index Profile n(z)</div>
+      <div class='desc'>Ciddor model with balloon data, 0–35 km</div>
+    </a>
+    <a class='card' href='/refraction/section4b_ciddor_raw.html'>
+      <div class='num'>Section 4b</div>
+      <div class='title'>Ciddor Raw Values</div>
+      <div class='desc'>Layer-by-layer n from balloon sounding data points</div>
+    </a>
+    <a class='card' href='/refraction/section5a_balloon_ceiling_ray.html'>
+      <div class='num'>Section 5a</div>
+      <div class='title'>Ray Path to Balloon Ceiling</div>
+      <div class='desc'>Observer to 12 km — refracted vs vacuum, true Cartesian spherical coords</div>
+    </a>
+    <a class='card' href='/refraction/section5c_cartesian_80km.html'>
+      <div class='num'>Section 5c</div>
+      <div class='title'>Ray Path to 80 km</div>
+      <div class='desc'>Full atmospheric path with exit tangent, altitude layers, intersection points</div>
+    </a>
+    <a class='card' href='/refraction/section6_uplift_curve.html'>
+      <div class='num'>Section 6</div>
+      <div class='title'>Refraction Uplift Curve</div>
+      <div class='desc'>Bennett (1982) vs Ciddor ray-trace across 0.2°–89° apparent elevation</div>
+    </a>
+    <a class='card' href='/refraction/section7_geometry_diagram.html'>
+      <div class='num'>Section 7</div>
+      <div class='title'>Observation Geometry</div>
+      <div class='desc'>Pikes Peak / 39 Aquarii cross-section — apparent, geometric, astropy directions</div>
+    </a>
+    <a class='card' href='/refraction/section7b_geometry_forced.html'>
+      <div class='num'>Section 7b</div>
+      <div class='title'>Forced 2.52° Geometry</div>
+      <div class='desc'>Same diagram at forced apparent elevation of 2.52°</div>
+    </a>
+  </div>
+</body>
+</html>
