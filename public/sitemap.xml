@@ -2,11 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rooster.ninja/about/</loc>
+  </url><url>
     <loc>https://rooster.ninja/categories/</loc>
+  </url><url>
+    <loc>https://rooster.ninja/celtheo/</loc>
+  </url><url>
+    <loc>https://rooster.ninja/skunk_werks/giga_ranger/</loc>
   </url><url>
     <loc>https://rooster.ninja/</loc>
   </url><url>
     <loc>https://rooster.ninja/moon_sensors/</loc>
+  </url><url>
+    <loc>https://rooster.ninja/refraction/</loc>
+  </url><url>
+    <loc>https://rooster.ninja/skunk_werks/</loc>
   </url><url>
     <loc>https://rooster.ninja/tags/</loc>
   </url>
