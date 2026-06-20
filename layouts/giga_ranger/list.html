@@ -34,11 +34,22 @@
       transition: border-color 0.2s;
     }
     a.link:hover { border-color: #58a6ff; }
+    .section-label {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: #8b949e; margin-top: 2rem; margin-bottom: 0.75rem;
+    }
+    .asset-links { display: flex; flex-direction: column; gap: 0.6rem; align-items: center; }
+    a.link.small { font-size: 1rem; padding: 0.45rem 1.1rem; }
   </style>
 </head>
 <body>
   <div class='breadcrumb'><a href='/'>Goose</a> / <a href='/skunk_werks/'>Skunk Werks</a> / Giga Ranger</div>
   <h1>Giga Ranger</h1>
   <a class='link' href='/skunk_werks/giga_ranger/project_overview/'>Project Overview →</a>
+  <div class='section-label'>Assets</div>
+  <div class='asset-links'>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_001.jpg'>Overview Diagram (JPG)</a>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_000.pdf'>Overview (PDF)</a>
+  </div>
 </body>
 </html>
