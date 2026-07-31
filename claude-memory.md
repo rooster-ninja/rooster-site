@@ -29,7 +29,7 @@ gets rendered and included in the S3 sync.
 ## Moon temp calibration
 - Notebook: `notebooks/Moon_Temp_Calibration_Jupyter/sensor_offset_analysis.ipynb`
 - Live at: `rooster.ninja/moon_sensors/calibration/Moon_Temp_Calibration_Jupyter/sensor_offset_analysis.html`
-- Current offsets (ESP32 flash): ADC0 = 0, ADC1 = +16, ADC2 = −64 (adjusted 2026-06-15)
+- Current offsets (ESP32 flash): ADC0 = 0, ADC1 = +22, ADC2 = −64 (ADC1 adjusted 2026-06-20, ADC2 adjusted 2026-06-15)
 - Pass criterion: std(adc0−adc1) ≤ 4.0 mV AND std(adc0−adc2) ≤ 4.0 mV
 
 ## CloudFront

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <link rel='icon' type='image/x-icon' href='/favicon.ico'>
+  <link rel='icon' type='image/png' href='/favicon.png'>
+  <link rel='shortcut icon' type='image/png' href='/favicon.png'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Moon Shadow Pic Logger — Skunk Werks</title>
+  <meta property='og:type'        content='website'>
+  <meta property='og:site_name'   content='Goose'>
+  <meta property='og:title'       content='Moon Shadow Pic Logger — Skunk Werks'>
+  <meta property='og:description' content='ESP32-CAM periodic low-light photo logger — firmware and host logger devlog.'>
+  <meta property='og:url'         content='https://rooster.ninja/moon_sensors/dev_moon-shadow-pic-logger/'>
+  <meta property='og:image'       content='https://rooster.ninja/goose_preview.jpg'>
+  <meta property='og:image:width' content='1209'>
+  <meta property='og:image:height' content='500'>
+  <meta name='twitter:card'       content='summary_large_image'>
+  <meta name='twitter:image'      content='https://rooster.ninja/goose_preview.jpg'>
+  <meta name='twitter:title'      content='Moon Shadow Pic Logger — Skunk Werks'>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0d1117; color: #e6edf3;
+      margin: 0; padding: 0;
+      line-height: 1.7;
+    }
+    .page-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #161b22; border-bottom: 1px solid #30363d;
+      padding: 0.75rem 2rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .breadcrumb { font-size: 0.9rem; color: #8b949e; }
+    .breadcrumb a { color: #58a6ff; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .content-wrap {
+      max-width: 900px; margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+    }
+    /* ── Typography ── */
+    h1 {
+      font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px;
+      border-bottom: 1px solid #30363d; padding-bottom: 0.5rem;
+      margin: 0 0 0.4rem;
+    }
+    .page-subtitle {
+      color: #8b949e; font-size: 0.95rem; margin: 0 0 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem; font-weight: 600;
+      border-bottom: 1px solid #21262d; padding-bottom: 0.3rem;
+      margin: 2.5rem 0 1rem;
+    }
+    h3 { font-size: 1.15rem; font-weight: 600; margin: 1.8rem 0 0.6rem; color: #cdd9e5; }
+    h4 { font-size: 1rem; font-weight: 600; margin: 1.2rem 0 0.4rem; color: #adbac7; }
+    p { margin: 0.7rem 0; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* ── Code ── */
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.85em;
+      background: #161b22; color: #e6edf3;
+      border: 1px solid #30363d; border-radius: 4px;
+      padding: 0.15em 0.4em;
+    }
+    pre {
+      background: #161b22; border: 1px solid #30363d; border-radius: 6px;
+      padding: 1.1rem 1.3rem; overflow-x: auto;
+      margin: 1rem 0;
+    }
+    pre code {
+      background: none; border: none; padding: 0;
+      font-size: 0.83rem; line-height: 1.55;
+    }
+    /* ── Tables ── */
+    table {
+      border-collapse: collapse; width: 100%;
+      margin: 1rem 0; font-size: 0.9rem;
+    }
+    th {
+      background: #161b22; color: #8b949e;
+      font-weight: 600; text-align: left;
+      padding: 0.5rem 0.85rem;
+      border: 1px solid #30363d;
+    }
+    td {
+      padding: 0.45rem 0.85rem;
+      border: 1px solid #30363d;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #0d1117; }
+    tr:nth-child(odd)  td { background: #111820; }
+    /* ── Lists ── */
+    ul, ol { padding-left: 1.6rem; margin: 0.6rem 0; }
+    li { margin: 0.25rem 0; }
+    /* ── Horizontal rule ── */
+    hr { border: none; border-top: 1px solid #30363d; margin: 2rem 0; }
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #30363d; margin: 1rem 0;
+      padding: 0.4rem 1rem; color: #8b949e;
+    }
+    /* ── Callout for lessons sections ── */
+    h2 + h3, h3 + p { }
+    /* repo link badge at bottom */
+    .repo-link {
+      display: inline-block; margin-top: 3rem;
+      font-size: 0.85rem; color: #58a6ff;
+      border: 1px solid #30363d; border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+    }
+    .repo-link:hover { border-color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class='page-header'>
+    <div class='breadcrumb'>
+      <a href='/'>Goose</a> /
+      <a href='/skunk_werks/'>Skunk Werks</a> /
+      dev_moon-shadow-pic-logger
+    </div>
+  </div>
+  <div class='content-wrap'>
+    <h1>dev_moon-shadow-pic-logger</h1>
+    <p class='page-subtitle'>ESP32-CAM periodic low-light photo logger — firmware &amp; host logger devlog</p>
+    {{ .Content }}
+    <a class='repo-link' href='https://github.com/rooster-ninja/moon_shadow_log_pics' target='_blank' rel='noopener'>
+      ⬡ github.com/rooster-ninja/moon_shadow_log_pics
+    </a>
+  </div>
+</body>
+</html>

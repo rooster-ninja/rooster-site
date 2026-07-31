@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moon Sensors on Goose</title>
-    <link>https://rooster.ninja/moon_sensors/</link>
+    <link>http://10.0.10.20:8889/moon_sensors/</link>
     <description>Recent content in Moon Sensors on Goose</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://rooster.ninja/moon_sensors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://10.0.10.20:8889/moon_sensors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

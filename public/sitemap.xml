@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rooster.ninja/about/</loc>
+    <loc>http://10.0.10.20:8889/about/</loc>
   </url><url>
-    <loc>https://rooster.ninja/categories/</loc>
+    <loc>http://10.0.10.20:8889/categories/</loc>
   </url><url>
-    <loc>https://rooster.ninja/celtheo/</loc>
+    <loc>http://10.0.10.20:8889/celtheo/</loc>
   </url><url>
-    <loc>https://rooster.ninja/skunk_werks/giga_ranger/</loc>
+    <loc>http://10.0.10.20:8889/skunk_werks/giga_ranger/</loc>
   </url><url>
-    <loc>https://rooster.ninja/</loc>
+    <loc>http://10.0.10.20:8889/</loc>
   </url><url>
-    <loc>https://rooster.ninja/moon_sensors/</loc>
+    <loc>http://10.0.10.20:8889/moon_sensors/</loc>
   </url><url>
-    <loc>https://rooster.ninja/refraction/</loc>
+    <loc>http://10.0.10.20:8889/moon_sensors/results/</loc>
   </url><url>
-    <loc>https://rooster.ninja/skunk_werks/</loc>
+    <loc>http://10.0.10.20:8889/moon_sensors/dev_moon-shadow-pic-logger/</loc>
   </url><url>
-    <loc>https://rooster.ninja/tags/</loc>
+    <loc>http://10.0.10.20:8889/refraction/</loc>
+  </url><url>
+    <loc>http://10.0.10.20:8889/skunk_werks/</loc>
+  </url><url>
+    <loc>http://10.0.10.20:8889/tags/</loc>
   </url>
 </urlset>

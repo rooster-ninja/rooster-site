@@ -38,18 +38,31 @@
       font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
       color: #8b949e; margin-top: 2rem; margin-bottom: 0.75rem;
     }
+    .subsection-label {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: #484f58; margin-top: 1.2rem; margin-bottom: 0.5rem;
+    }
     .asset-links { display: flex; flex-direction: column; gap: 0.6rem; align-items: center; }
+    .nav-links { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
     a.link.small { font-size: 1rem; padding: 0.45rem 1.1rem; }
   </style>
 </head>
 <body>
   <div class='breadcrumb'><a href='/'>Goose</a> / <a href='/skunk_werks/'>Skunk Werks</a> / Giga Ranger</div>
   <h1>Giga Ranger</h1>
-  <a class='link' href='/skunk_werks/giga_ranger/project_overview/'>Project Overview →</a>
+  <div class='nav-links'>
+    <a class='link' href='/skunk_werks/giga_ranger/project_overview/'>Project Overview →</a>
+    <a class='link' href='/moon_sensors/calibration/Giga_Ranger_Calibration/sx1280_ranging_calibration.html'>Calibration Procedure →</a>
+  </div>
   <div class='section-label'>Assets</div>
   <div class='asset-links'>
-    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_003.jpg'>Overview Diagram (JPG)</a>
-    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_003.pdf'>Overview (PDF)</a>
+    <div class='subsection-label'>Overview</div>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_003.jpg' target='_blank' rel='noopener'>Overview Diagram (JPG)</a>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/GigaRangerOverview_003.pdf' download>Overview (PDF)</a>
+    <div class='subsection-label'>Technical Documents</div>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/AN1200.29_Introduction_to_Ranging_SX1280.pdf' download>AN1200.29 — Introduction to Ranging (PDF)</a>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/AN1200.50_SX1280_Ranging_Protocol.pdf' download>SX1280 Datasheet Rev 2.3 — Sept 2023 (PDF)</a>
+    <a class='link small' href='/skunk_werks/giga_ranger/assets/Wolf_2019_WPNC2019_Benchmark_SX1280_Cronen.pdf' download>Wolf et al. 2019 — SX1280 Ranging Benchmark (PDF)</a>
   </div>
 </body>
 </html>

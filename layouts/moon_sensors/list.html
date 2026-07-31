@@ -28,17 +28,22 @@
     h1 { font-size: 4rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -1px; }
     .breadcrumb { font-size: 0.9rem; color: #8b949e; margin-bottom: 2.5rem; }
     .breadcrumb a { color: #58a6ff; text-decoration: none; }
-    a {
+    .nav-links { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+    a.link {
       color: #58a6ff; text-decoration: none; font-size: 1.2rem;
       padding: 0.6rem 1.4rem; border: 1px solid #30363d; border-radius: 6px;
       transition: border-color 0.2s;
     }
-    a:hover { border-color: #58a6ff; }
+    a.link:hover { border-color: #58a6ff; }
   </style>
 </head>
 <body>
   <div class='breadcrumb'><a href='/'>Goose</a> / Moon Sensors</div>
   <h1>Moon Sensors</h1>
-  <a href='/moon_sensors/calibration/Moon_Temp_Calibration_Jupyter/sensor_offset_analysis.html'>Moon Temp Calibration →</a>
+  <div class='nav-links'>
+    <a class='link' href='/moon_sensors/overview/moon_temp_overview.html'>Project Overview →</a>
+    <a class='link' href='/moon_sensors/results/'>Moon Temp Results →</a>
+    <a class='link' href='/moon_sensors/calibration/Moon_Temp_Calibration_Jupyter/sensor_offset_analysis.html'>Moon Temp Calibration →</a>
+  </div>
 </body>
 </html>
