@@ -17,6 +17,7 @@ deactivate
 
 aws s3 sync "$SITE_DIR/public/" s3://rooster.ninja/ --delete --exclude "moon_sensors/*" --exclude "site_libs/*"
 aws s3 cp "$SITE_DIR/public/moon_sensors/index.html" s3://rooster.ninja/moon_sensors/index.html
+aws s3 cp "$SITE_DIR/public/moon_sensors/results/index.html" s3://rooster.ninja/moon_sensors/results/index.html
 aws s3 sync "$NOTEBOOKS_DIR/_site/" s3://rooster.ninja/moon_sensors/calibration/ --exclude "moon_sensors/*"
 aws s3 sync "$NOTEBOOKS_DIR/_site/moon_sensors/results/" s3://rooster.ninja/moon_sensors/results/
 aws s3 sync "$NOTEBOOKS_DIR/_site/moon_sensors/overview/" s3://rooster.ninja/moon_sensors/overview/
